@@ -285,6 +285,7 @@ static int do_test (const char *assignor) {
 	test_conf_set(conf, "partition.assignment.strategy", assignor);
 	/* Speed up propagation of new topics */
 	test_conf_set(conf, "topic.metadata.refresh.interval.ms", "5000");
+        test_conf_set(conf, "allow.auto.create.topics", "true");
 
 	/* Create a single consumer to handle all subscriptions.
 	 * Has the nice side affect of testing multiple subscriptions. */
